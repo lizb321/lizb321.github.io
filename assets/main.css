@@ -11,9 +11,9 @@ body {
   font-family: 'Raleway', serif;
   color: #ffffff;
   font-weight: 300;
-  background-image: url('images/gradient.png');
+/*  background-image: url('images/gradient.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%;*/
 }
 
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -4577,7 +4577,7 @@ input, select, textarea {
     flex-wrap: wrap;
   }
 
-    body.is-ie #wrapper section > header {
+/*    body.is-ie #wrapper section > header {
       width: 50%;
     }
 
@@ -4590,7 +4590,7 @@ input, select, textarea {
       text-align: left;
       margin-left: 50%;
       padding: 5rem;
-    }
+    }*/
 
   body.is-ie #wrapper > section > .content > section {
     width: 100vw;
