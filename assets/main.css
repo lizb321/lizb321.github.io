@@ -135,6 +135,11 @@ header {
       color: #698897;
     }
 
+  .nav-link > a:hover {
+    color: #84c8df;
+    border-bottom: 1px solid #84c8df;
+  }
+
 /* hero styles */ 
 
 .hero {
