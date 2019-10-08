@@ -140,6 +140,10 @@ header {
     border-bottom: 1px solid #84c8df;
   }
 
+  .pdf {
+    target-new: tab;
+  }
+
 /* hero styles */ 
 
 .hero {
