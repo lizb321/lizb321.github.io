@@ -3932,6 +3932,10 @@ input, select, textarea {
     background-color: #bcebff;
   }
 
+   .expertdash:before {
+    background-color: #EAF3F9;
+  }
+
     #wrapper:before {
       background-attachment: fixed;
 /*      background-color: #dae7ee;
