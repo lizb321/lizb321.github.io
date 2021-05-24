@@ -3936,6 +3936,10 @@ input, select, textarea {
     background-color: #EAF3F9;
   }
 
+  .printprep:before {
+    background-color: #F5C0BC;
+  }
+
     #wrapper:before {
       background-attachment: fixed;
 /*      background-color: #dae7ee;
