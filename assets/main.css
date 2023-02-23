@@ -1,5 +1,42 @@
  @import url('normalize.css');
 
+ @import url(fontawesome-all.min.css);
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");*/
+
+/*@import url("href=https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");*/
+
+/*<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Chivo+Mono:wght@200;700&display=swap");
+
+/*<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">*/
+
+@font-face {
+    font-family: "Magilio";
+    src: url("./fonts/magilio-font/MagilioRegular.ttf");
+}
+
+@font-face {
+    font-family: "Larken";
+    src: url("./fonts/larken/Larken-Medium.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Larken";
+    src: url("./fonts/larken/Larken-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Larken";
+    src: url("./fonts/larken/Larken-Thin.otf");
+    font-weight: 200;
+}
+
+/*<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">*/
+
 /* base styles */
 
 * {
@@ -8,7 +45,7 @@
 }
 
 body {
-  font-family: 'Raleway', serif;
+  font-family: "Open Sans", serif;
   color: #ffffff;
   font-weight: 300;
 /*  background-image: url('images/gradient.png');
@@ -75,12 +112,12 @@ h2 {
 
   }
 
-#header-wrapper {
+.header-wrapper {
   margin: 0 auto;
   width: 100%;
-/*  max-width: 90%;*/
-  padding: 2rem 5rem;
-  background-color: #F2F9FB;
+  padding: 1.5rem 5rem;
+  margin-bottom: 100px;
+  position: fixed;
 }
 
 @media screen and (max-width: 770px) {
@@ -95,16 +132,25 @@ header {
   padding-top: 2.5rem;
 }
 
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
 @media screen and (max-width: 770px) {
   header {
     padding: 1rem;
   }
 }
 
-.header-wrapper {
+
+.header-wrapper{
   display: flex;
   width: 100%;
+  background-color: rgba(255,255,255,0);
+  z-index: 999;
 }
+
 
 .logo {
     max-width: 350px;
@@ -132,19 +178,16 @@ header {
   margin: 0;
   justify-content: flex-end;
   margin-left: 3rem;
-  letter-spacing: 1.75px;
-/*  font-family: 'Nunito';
-*/  color: #698897;
+  font-weight: 500;
+  color: #698897;
 }
 
   .nav-link > a {
       text-decoration: none;
-      color: #698897;
     }
 
   .nav-link > a:hover {
-    color: #84c8df;
-    border-bottom: 1px solid #84c8df;
+    color: #96ad6d;
   }
 
 /* hero styles */ 
@@ -154,7 +197,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: #c8ecf7;
+  background: #f5fee5;
   padding: 20%;
 }
 
@@ -171,10 +214,9 @@ header {
 
 .intro-paragraph {
   color: #000000;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 0.0375em;
   line-height: 2;
 /*  color: #717171;
   font-weight: 300;*/
@@ -207,7 +249,21 @@ header {
 .intro-section {
   text-align: center;
   padding: 2rem;
-  background-color: #F2F9FB;
+  background-color: #fdfffa;
+}
+
+/*needs a home*/
+
+.categorybackground {
+  background-color: #f5fee5;
+  padding: 10px 2px;
+}
+
+.notes {
+  font-family: Chivo Mono;
+  font-size: 0.75rem;
+  color: #96ad6d;
+  text-align: justify;
 }
 
 /* section styles */ 
@@ -670,13 +726,6 @@ header {
 /*PARADIGM*/
 
 
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
-
-@import url("href=https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
-
-/*<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">*/
-
 /*
   Paradigm Shift by HTML5 UP
   html5up.net | @ajlkn
@@ -839,10 +888,9 @@ input, select, textarea {
 
   body, input, select, textarea {
     color: #000000;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 0.0375em;
     line-height: 2;
   }
 
@@ -890,16 +938,17 @@ input, select, textarea {
     }
 
   h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: "Larken", serif;
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: regular;
     line-height: 1.1;
     margin: 0 0 1.5rem 0;
-    text-transform: none;
+    text-transform: capitalize;
+    padding-top: 5rem;
   }
 
   h2 {
-    font-family: 'DM Serif Display', serif;
+    font-family: "Larken", serif;
     font-size: 1.25rem;
     font-weight: 800;
     margin: 0 0 2rem 0;
@@ -2883,10 +2932,9 @@ input, select, textarea {
       color: #000000;
       cursor: pointer;
       display: inline-block;
-      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       font-size: 1rem;
       font-weight: 300;
-      letter-spacing: 0.0375em;
       padding-left: 2.675rem;
       padding-right: 0.875rem;
       position: relative;
@@ -3666,7 +3714,7 @@ input, select, textarea {
 */        }
 
       .gallery a.portrait img {
-/*        height: 30vw;
+/*        height: 25vw;
 */      }
 
     .gallery .modal {
@@ -3979,14 +4027,14 @@ input, select, textarea {
       left: 0;
       position: absolute;
       top: 0;
-      width: 30vw;
+      width: 25vw;
       z-index: -1;
     }
 
     #wrapper section {
       display: grid;
       grid-template-areas: "header content" "footer content";
-      grid-template-columns: 30vw 70vw;
+      grid-template-columns: 25vw 75vw;
       grid-template-rows: 1fr;
     }
 
@@ -4133,9 +4181,9 @@ input, select, textarea {
     #wrapper .copyright {
       color: rgba(0, 0, 0, 0.25);
       font-size: 1rem;
-      left: 30vw;
+      left: 25vw;
       position: relative;
-      width: 30vw;
+      width: 25vw;
     }
 
       #wrapper .copyright a {
@@ -4161,7 +4209,7 @@ input, select, textarea {
 
     #wrapper > section > header:before {
       height: calc(100% + 10rem);
-      left: calc(30vw - 5rem);
+      left: calc(25vw - 5rem);
     }
 
     #wrapper > section > header h1:before, #wrapper > section > header h2:before {
@@ -4174,7 +4222,7 @@ input, select, textarea {
     }
 
     #wrapper > section > .content > section {
-      left: calc(-30vw - 5rem);
+      left: calc(-25vw - 5rem);
     }
 
       #wrapper > section > .content > section > header {
@@ -4186,7 +4234,7 @@ input, select, textarea {
     }
 */
     #wrapper > section.intro > header:before {
-      margin-left: calc(30vw - 10rem);
+      margin-left: calc(25vw - 10rem);
     }
 
     @media screen and (max-width: 1152px) {
@@ -4202,7 +4250,7 @@ input, select, textarea {
     }
 
     #wrapper > section:last-of-type > header:after {
-      left: calc(30vw - 5rem - 0.25rem + 1px);
+      left: calc(25vw - 5rem - 0.25rem + 1px);
     }
 
     #wrapper .copyright {
@@ -4234,7 +4282,7 @@ input, select, textarea {
 
         #wrapper > section > header:before {
           height: calc(100% + 8rem);
-          left: calc(30vw - 4rem);
+          left: calc(25vw - 4rem);
         }
 
         #wrapper > section > header h1:before, #wrapper > section > header h2:before {
@@ -4247,7 +4295,7 @@ input, select, textarea {
         }
 
         #wrapper > section > .content > section {
-          left: calc(-30vw - 4rem);
+          left: calc(-25vw - 4rem);
         }
 
           #wrapper > section > .content > section > header {
@@ -4259,7 +4307,7 @@ input, select, textarea {
         }
 
         #wrapper > section.intro > header:before {
-          margin-left: calc(30vw - 8rem);
+          margin-left: calc(25vw - 8rem);
         }
 
     }
@@ -4279,7 +4327,7 @@ input, select, textarea {
     @media screen and (max-width: 1280px) {
 
         #wrapper > section:last-of-type > header:after {
-          left: calc(30vw - 4rem - 0.25rem + 1px);
+          left: calc(25vw - 4rem - 0.25rem + 1px);
         }
 
         #wrapper .copyright {
