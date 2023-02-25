@@ -180,6 +180,8 @@ header {
   margin-left: 3rem;
   font-weight: 500;
   color: #698897;
+  font-family: "Larken", serif;
+  letter-spacing: 0.05em;
 }
 
   .nav-link > a {
@@ -699,7 +701,7 @@ header {
 /* END TEST */
 
 .intro-paragraph {
-  color: #000000;
+  color: #242620;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -823,6 +825,13 @@ header {
 
     .tile-title {
       margin: 1.25rem 0 0 0;
+    }
+
+    .tile-description {
+      color: #73756e;
+      font-size: 0.85rem;
+      line-height: 1.5em;
+
     }
 
     .tiles article {
@@ -1376,11 +1385,11 @@ input, select, textarea {
 
   body {
     background-color: #ffffff;
-    color: #000000;
+    color: #242620;
   }
 
   body, input, select, textarea {
-    color: #000000;
+    color: #242620;
     font-family: "Open Sans", Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 300;
@@ -1393,7 +1402,7 @@ input, select, textarea {
     -ms-transition: border-bottom-color 0.25s ease-in-out;
     transition: border-bottom-color 0.25s ease-in-out;
     text-decoration: none;
-    color: #000000;
+    color: #242620;
 /*    border-bottom: dotted 1px;
 */  }
 
@@ -1404,7 +1413,7 @@ input, select, textarea {
 
   strong, b {
     font-weight: 600;
-    color: #000000;
+    color: #242620;
   }
 
   em, i {
@@ -1416,13 +1425,13 @@ input, select, textarea {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #000000;
+    color: #242620;
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 600;
 /*    letter-spacing: 0.175em;*/
-    line-height: 1.75;
+/*    line-height: 1.75;*/
     margin: 0 0 1.5rem 0;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
   }
 
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1438,6 +1447,7 @@ input, select, textarea {
     margin: 0 0 1.5rem 0;
     text-transform: capitalize;
     padding-top: 5rem;
+    letter-spacing: 0.05em;
   }
 
   h2 {
@@ -1446,10 +1456,13 @@ input, select, textarea {
     font-weight: 800;
     margin: 0 0 2rem 0;
     text-transform: none;
+    letter-spacing: 0.05em;
   }
 
   h3 {
-    font-size: 0.875rem;
+    font-family: "Larken", serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
 
   h4 {
@@ -3081,7 +3094,7 @@ input, select, textarea {
     border-radius: 0.325rem;
     border: 0;
     box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
-    color: #000000 !important;
+    color: #242620 !important;
     cursor: pointer;
     display: inline-block;
     font-family: "Raleway", Helvetica, sans-serif;
@@ -3182,7 +3195,7 @@ input, select, textarea {
     .button.primary {
       background-color: #dae7ee;
       box-shadow: none;
-      color: #000000 !important;
+      color: #242620 !important;
     }
 
       input[type="submit"].primary:hover,
@@ -3358,7 +3371,7 @@ input, select, textarea {
     }
 
   label {
-    color: #000000;
+    color: #242620;
     display: block;
     font-family: "Raleway", Helvetica, sans-serif;
     font-size: 0.75rem;
@@ -3390,7 +3403,7 @@ input, select, textarea {
 
     select option {
       background-color: #ffffff;
-      color: #000000;
+      color: #242620;
     }
 
     select:focus::-ms-value {
@@ -3422,7 +3435,7 @@ input, select, textarea {
     input[type="checkbox"] + label,
     input[type="radio"] + label {
       text-decoration: none;
-      color: #000000;
+      color: #242620;
       cursor: pointer;
       display: inline-block;
       font-family: "Open Sans", Helvetica, sans-serif;
@@ -4021,7 +4034,7 @@ input, select, textarea {
     }
 
     table th {
-      color: #000000;
+      color: #242620;
       font-size: 0.9rem;
       font-weight: 600;
       padding: 0 0.75rem 0.75rem 0.75rem;
@@ -4171,23 +4184,21 @@ input, select, textarea {
     padding-top: 1.5rem;
   }
 
-    .gallery a {
+    .gallery-sizing {
       border-bottom: 0;
       display: block;
       margin: 1.25rem 0 0 1.25rem;
       outline: 0;
       position: relative;
-      width: calc(50% - 1.25rem);
+      min-height: 18rem;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      box-shadow: 0px 0px 32px -4px #eaeaea;
     }
 
-      .gallery a img {
-        display: block;
-/*        height: 25vw;
-*/        min-height: 18rem;
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        box-shadow: 0px 0px 16px 0px #c7c7c7;
+      .gallery-sizing img {
+        
       }
 
       .gallery:hover a img {
@@ -4427,7 +4438,7 @@ input, select, textarea {
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        color: #000000;
+        color: #242620;
         display: block;
         font-size: 1.25rem;
         height: 3.25rem;
@@ -4659,7 +4670,7 @@ input, select, textarea {
       }
 
       #wrapper > section:last-of-type > header:after {
-        background: #000000;
+        background: #242620;
         opacity: 0.1;
         border-radius: 0.5rem;
         bottom: -1.5rem;
